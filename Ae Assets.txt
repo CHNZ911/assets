@@ -1,0 +1,117 @@
+Money Overlays: 
+➡️: https://drive.google.com/drive/folders/1yQ1gDUdp6waRJHYTLReqjzcX9UCe_Hh9?usp=sharing
+
+
+##Animated Emojis
+➡️: https://drive.google.com/drive/folders/1WZrpu3OYm97vilc6ZKkPmVDsxAXx7epy?usp=sharing
+
+
+
+Bouncing Expression
+
+amp = .04;
+freq = 1.8;
+decay = 3;
+n = 0;
+time_max = 3;
+
+if (numKeys > 0) {
+    n = nearestKey(time).index;
+    if (key(n).time > time) {
+        n--;
+    }
+}
+
+if (n == 0) {
+    t = 0;
+} else {
+    t = time - key(n).time;
+}
+
+if (n > 0 && t < time_max) {
+    v = velocityAtTime(key(n).time - thisComp.frameDuration / 10);
+    
+    // Ease Out Factor (starts at 1, gradually reduces to 0)
+    easeFactor = easeOut(t, 0, time_max, 1, 0);
+    
+    value + v * amp * Math.sin(freq * t * 2 * Math.PI) / Math.exp(decay * t) * easeFactor;
+} else {
+    value;
+} 
+
+
+
+Counting Number
+
+num = effect("Slider Control")("Slider").value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+
+
+
+Anchor Point Expression (Transform Shape Anchor Point)
+
+/* TOP LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, -h/2]
+
+
+
+/* TOP CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, -h/2]
+
+
+
+/* TOP RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, -h/2]
+
+
+
+/* MIDDLE LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, 0]
+
+
+
+/* MIDDLE CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, 0]
+
+
+
+/* MIDDLE RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, 0]
+
+
+
+/* BOTTOM LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, h/2]
+
+
+
+/* BOTTOM CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, h/2]
+
+
+
+/* BOTTOM RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, h/2]
+
+
+
+Note: If not working, open the layer > content > (you will get a name of the shape and the number, Ex: Ellipse 2) change the expression from "Rectangle 1" to the name and the number.
+same for the path...

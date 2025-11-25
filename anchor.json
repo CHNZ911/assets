@@ -1,0 +1,62 @@
+{
+  "assets: "/* TOP LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, -h/2]
+
+
+
+/* TOP CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, -h/2]
+
+
+
+/* TOP RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, -h/2]
+
+
+
+/* MIDDLE LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, 0]
+
+
+
+/* MIDDLE CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, 0]
+
+
+
+/* MIDDLE RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, 0]
+
+
+
+/* BOTTOM LEFT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[-w/2, h/2]
+
+
+
+/* BOTTOM CENTER */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[0, h/2]
+
+
+
+/* BOTTOM RIGHT */
+w = content("Rectangle 1").content("Rectangle Path 1").size[0];
+h = content("Rectangle 1").content("Rectangle Path 1").size[1];
+[w/2, h/2]"
+}
